@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=ABNORA
+GenericName=PDF Reader
+Comment=An immersive, themeable PDF reader with an open-book reading mode
+Exec=abnora %f
+Icon=abnora
+Terminal=false
+Categories=Office;Viewer;Graphics;
+MimeType=application/pdf;
+Keywords=pdf;reader;book;themes;
+StartupWMClass=ABNORA

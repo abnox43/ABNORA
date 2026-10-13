@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+"""ABNORA entry point.
+
+Run from a checkout:  python main.py [document.pdf]
+Or install with pip:  abnora [document.pdf]
+"""
+
+import os
+import sys
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "src"))
+
+from abnora.app import main  # noqa: E402
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "abnora"
+version = "0.1.0"
+description = "An immersive, themeable PDF reader with a beautiful open-book reading mode."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "ABNORA contributors" }]
+requires-python = ">=3.11"
+keywords = ["pdf", "reader", "qt", "desktop", "themes"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: X11 Applications :: Qt",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Topic :: Office/Business",
+]
+dependencies = [
+    "PySide6>=6.6",
+    "PyMuPDF>=1.24",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+abnora = "abnora.app:main"
+
+[project.urls]
+Homepage = "https://github.com/abnora/abnora"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
